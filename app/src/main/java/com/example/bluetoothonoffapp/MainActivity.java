@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.bluetooth.BluetoothAdapter;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,6 +17,17 @@ public class MainActivity extends AppCompatActivity {
         b1 = findViewById(R.id.button);
         b2 = findViewById(R.id.button2);
         b = BluetoothAdapter.getDefaultAdapter();
-
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                b.enable();
+            }
+        });
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                b.disable();
+            }
+        });
     }
 }
