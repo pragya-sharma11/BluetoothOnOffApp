@@ -27,10 +27,12 @@ public class MainActivity2 extends AppCompatActivity {
                 if(!bt){
                     b.enable();
                     i.setImageResource(R.drawable.c);
+                    bt = true;
                 }
                 else {
                     i.setImageResource(R.drawable.c);
                     b.disable();
+                    bt = false;
                 }
             }
         });
